@@ -1,4 +1,4 @@
-import classNames from "classNames";
+import classNames from "classnames";
 import { Container } from "../../Container/Container";
 import { Link } from "react-router-dom";
 import { Notification } from "../../../util/notification";

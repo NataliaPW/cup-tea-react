@@ -1,4 +1,4 @@
-import classNames from "classNames";
+import classNames from "classnames";
 import { Container } from "../Container/Container";
 import style from "./Maincontent.module.scss";
 import { Section } from "../Section/Section";

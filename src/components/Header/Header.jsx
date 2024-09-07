@@ -1,5 +1,5 @@
 
-import classNames from "classNames";
+import classNames from "classnames";
 import { Container } from "../Container/Container";
 /*import logo from "../../assets/images/header/logo.svg"
 

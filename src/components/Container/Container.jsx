@@ -1,5 +1,5 @@
 import style from "./Container.module.scss";
-import classNames from "classNames";
+import classNames from "classnames";
 
 export const Container = ({children,className}) => {
    return (

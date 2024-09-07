@@ -1,4 +1,4 @@
-import classNames from "classNames";
+import classNames from "classnames";
 import { Container } from "../Container/Container";
 import style from "./SkiletonLoader.module.scss";
 import ContentLoader from "react-content-loader";

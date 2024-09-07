@@ -1,5 +1,5 @@
 import  style  from "./Title.module.scss";
-import classNames from "classNames";
+import classNames from "classnames";
 /*
 export const Section = (props) => (
   // return (
