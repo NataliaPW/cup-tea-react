@@ -1,0 +1,58 @@
+.card{
+   height: 100%;
+   
+   &__article{
+      background-color: $color-gray-100;
+      display: flex;
+      flex-direction: column;
+      @include gap-all-adopt(10,5,1);
+      border-radius: 6px;
+      overflow: hidden;
+   }
+
+   &__image-box{
+      padding-bottom: calc(445/420*100%);
+   }
+
+   &__name{
+      @extend %asz20;
+   }
+
+   &__text-box{
+      display: flex;
+      flex-direction: column;
+      @include gap-all-adopt(30,15,1);
+      justify-content: space-between;
+      @include p-adopt(24,16,1);
+      @include p-adopt(24,16,3);
+      @include p-adopt(24,8,2);
+      @include p-adopt(24,8,4);
+   }
+}
+
+.count{
+   display: flex;
+   align-items: center;
+
+   .btn{
+      padding: 1px;
+      //line-height: 24px;
+      //width: 36px;
+      //height: 36px;
+       @include line-height-adopt(36, 24);
+      @include icon-size-aspectRatio(36,24,36);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   &__input{
+      width: 24px;
+      outline: transparent;
+      transition: all 0.5s ease;      
+
+      &:hover{
+         color:$color-hover;
+      }
+   }
+}

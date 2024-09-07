@@ -1,0 +1,101 @@
+//  @include icon-size-adopt(48,30,48,30);//ширина/высота
+@mixin icon-size-adopt($maxWidth,$minWidth,$maxHeight,$minHeight) {
+    @include width-adopt($maxWidth,$minWidth);
+      @include height-adopt($maxHeight,$minHeight);
+      max-width: #{$maxWidth}px;
+      max-height: #{$maxHeight}px;
+}
+
+//  @include icon-size-aspectRatio(48,30,48);//ширина/высота
+@mixin icon-size-aspectRatio($maxWidth,$minWidth,$maxHeight) {
+    @include width-adopt($maxWidth,$minWidth);
+      max-width: #{$maxWidth}px;
+     aspect-ratio: calc($maxWidth / $maxHeight);
+}
+
+//  @include icon-height-aspectRatio(48,30,48);//высота/ширина
+@mixin icon-height-aspectRatio($maxHeight,$minHeight,$maxWidth) {
+    @include height-adopt($maxHeight,$minHeight);
+      max-height: #{$maxWidth}px;
+     aspect-ratio: calc($maxWidth / $maxHeight);
+}
+
+/*подключение иконок*/
+@mixin icon($name, $width, $height, $color) {
+   @if ($width>0) {
+      width: #{$width}px;
+   }
+
+   @if ($height>0) {
+      height: #{$height}px;
+   }
+
+   mask: url('../images/sprite.svg#icon-#{$name}') center / cover no-repeat;
+   background-color: #{$color};
+}
+
+/* @include icon(search, 24, 24, $bg9); */
+
+//!изображение на фон
+//? mibg (cover - по yмолчанию) @include img_bg(1); 
+@mixin img_bg($cover) {
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   @content;
+
+   @if ($cover==0) {
+      object-fit: contain;
+   }
+
+   @else if($cover==1) {
+      object-fit: cover;
+   }
+}
+
+/* @include img_adapt(1); 
+0-contain
+1-cover*/
+
+@mixin img_adapt($cover) {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+
+   @content;
+
+   @if ($cover==0) {
+      object-fit: contain;
+   }
+
+   @else if($cover==1) {
+      object-fit: cover;
+   }
+}
+
+/* @include img_adapt(1); 
+0-contain
+1-cover*/
+
+@mixin link-svg($maxWidth,$minWidth,$maxHeight, $color, $color-hover) {
+  .link {
+    text-align: center;
+    display: block;
+
+    &__svg {
+       @include width-adopt($maxWidth,$minWidth);
+      max-width: #{$maxWidth}px;
+     aspect-ratio: calc($maxWidth / $maxHeight);
+      fill:#{$color};
+      transition: fill 0.5s ease;
+
+      &:hover {
+        fill: #{$color-hover};
+      }
+    }
+  }
+
+  @content;
+}

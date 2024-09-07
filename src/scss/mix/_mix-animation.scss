@@ -1,0 +1,67 @@
+//анимация item ul
+//@include animListScroll3d(8, 'siteskills__text',-30,0,0);
+@mixin animListScroll3d($num, $name,$x,$y,$z) {
+  @for $i from 1 to $num + 1 {
+  $size: 1.5 + $i * 0.30;
+  $x1:$x + '%';
+  $y1:$y + '%';
+  $z1:$z + '%';
+
+  .#{$name}--#{$i} {
+   opacity:0;
+     &._animSection._active{
+       opacity:1;
+   animation: zoomList #{$size}s;
+  }
+}
+
+@keyframes zoomList {
+   from {
+      transform: scale3d(#{$x1}, #{$y1}, #{$z1});
+   }
+}
+}
+}
+
+//анимация item ul
+//@include animOneScroll3d(1.5,-30,0,0);
+@mixin animOneScroll3d($name,$size,$x,$y,$z) {
+  $x1:$x + '%';
+  $y1:$y + '%';
+  $z1:$z + '%';
+
+   .#{$name} {
+   opacity:0;
+   &._animSection._active{
+       opacity:1;
+   animation: zoomList #{$size}s;
+  }
+
+@keyframes zoomList {
+   from {
+      transform: scale3d(#{$x1}, #{$y1}, #{$z1});
+   }
+}
+}
+}
+
+/*анимирование*/
+
+@mixin transition($name1, $name2, $name3, $time, $anim) {
+   outline: transparent;
+
+   @if (($name2==0) and ($name3==0)) {
+      transition: $name1 #{$time}s $anim;
+   }
+
+   @if ($name3==0) {
+      transition: $name1 #{$time}s $anim,
+      $name2 #{$time}s $anim;
+   }
+
+   @else {
+      transition: $name1 #{$time}s #{$anim},
+      $name2 #{$time}s $anim,
+      $name3 #{$time}s $anim;
+   }
+}

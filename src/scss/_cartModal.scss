@@ -1,0 +1,305 @@
+.cartModal {
+   @include p-adopt(200, 120, 1);
+   @include p-adopt(60, 40, 3);
+
+   &__container {
+      display: flex;
+      flex-direction: column;
+      @include gap-all-adopt(50, 35, 3);
+   }
+
+   &__top {
+      display: flex;
+      justify-content: space-between;
+      @include gap-all-adopt(50, 20, 1);
+
+      @include media(1, $md2) {
+         flex-direction: column-reverse;
+      }
+   }
+
+   &__goods{
+      width: 100%;
+   }
+
+   .goods {
+      &__list {
+         @include media(1, $md2) {
+            --grid-count: 4;
+            --grid-column-gap: 10px;
+         }
+
+         @include media(1, $md3) {
+            --grid-count: 2;
+            --grid-column-gap: 10px;
+         }
+      }
+   }
+}
+
+.form {
+   display: flex;
+   flex-direction: column;
+   @include gap-all-adopt(32, 24, 3);
+
+   &__box {
+      background-color: $color-gray-100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include gap-all-adopt(20, 10, 1);
+      border-radius: 6px;
+      margin-bottom: auto;
+      @include p-adopt(24, 16, 1);
+      @include p-adopt(24, 16, 2);
+      @include p-adopt(24, 16, 3);
+      @include p-adopt(24, 16, 4);
+   }
+
+   &__list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      @include gap-all-adopt(25, 15, 1);
+   }
+
+   &__item {
+      width: 48%;
+
+      &:last-child {
+         width: 100%;
+      }
+
+      @include media(1, $md3) {
+         width: 100%;
+      }
+   }
+
+   &__input {
+      width: 100%;
+      background-color: $color-gray-100;
+      border-radius: 4px;
+      outline: transparent;
+      transition: all 0.5s ease;
+      border: 1px solid transparent;
+      padding: 8px 24px;
+      font-size: 12px;
+      line-height: 1.4;
+
+      &::placeholder {
+         color: $color-main;
+
+         &:hover,
+         &:active,
+         &.active {
+            color: $color-hover;
+         }
+      }
+
+      &:hover,
+      &:active,
+      &.active {
+         background-color: $color-bg;
+         border-color: $color-hover;
+         color: $color-hover;
+      }
+
+   }
+}
+
+.radio-box {
+   &__title {
+      @include m-adopt(25, 20, 3);
+   }
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      @include gap-all-adopt(15, 10, 3);
+   }
+}
+
+.radio {
+   position: relative;
+
+   &__input {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      transition: all 0.5s ease;
+      outline-color: transparent;
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      cursor: pointer;
+
+
+      &:focus:not(:disabled) {
+         &~.radio {
+            &__label {
+               color: $color-hover;
+
+               .radio {
+                  &__label-check {
+                     border-color: $color-hover;
+                     background-color: $color-bg;
+
+                     &::after {
+                        width: 12px;
+                        height: 12px;
+                        transform: translate(-50%, -50%) scale(1);
+                     }
+                  }
+               }
+            }
+         }
+      }
+
+      &:hover:not(:disabled) {
+         &~.radio {
+            &__label {
+               // color: $color-bg;
+
+               .radio {
+                  &__label-check {
+                     border-color: $color-hover;
+                     border-color: $color-hover;
+
+                     &::after {
+                        width: 12px;
+                        height: 12px;
+                        transform: translate(-50%, -50%) scale(1);
+                     }
+                  }
+               }
+            }
+         }
+      }
+
+      &:active:not(:disabled),
+      &.active {
+         &~.radio {
+            &__label {
+               // color: $color-bg;
+
+               .radio {
+                  &__label-check {
+                     border-color: $color-hover;
+
+                     &::after {
+                        width: 12px;
+                        height: 12px;
+                        transform: translate(-50%, -50%) scale(1);
+                     }
+                  }
+               }
+            }
+         }
+      }
+
+      &:checked {
+         &~.radio {
+            &__label {
+               // color: $color-bg;
+
+               .radio {
+                  &__label-check {
+                     border-color: $color-hover;
+
+                     &::after {
+                        width: 12px;
+                        height: 12px;
+                        transform: translate(-50%, -50%) scale(1);
+                     }
+                  }
+               }
+            }
+         }
+      }
+
+      &:disabled {
+         &~.radio {
+            &__label {
+               .radio {
+                  &__label-check {
+                     filter: opacity(0.4);
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   &__label {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: $color-main;
+      transition: all 0.5s ease;
+   }
+
+   &__label-check {
+      position: relative;
+      transition: all 0.5s ease;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $color-hover;
+      border-radius: 50%;
+      background-color: transparent;
+
+      &::after {
+         content: '';
+         border-radius: 50%;
+         width: 0;
+         height: 0;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%) scale(0);
+         background-color: $color-hover;
+      }
+   }
+}
+
+.price-box {
+   display: flex;
+   flex-direction: column;
+   gap: 6px;
+   @extend %asz20;
+
+    @include media(1, $md2) {
+   flex-direction: row;
+    }
+}
+
+.modalCart {
+   &__wrapper {
+      position: relative;
+      width: 100%;
+      cursor: default;
+      @include p-adopt(30, 20, 1);
+      @include p-adopt(30, 20, 3);
+      @include p-adopt(30, 25, 2);
+      @include p-adopt(30, 25, 4);
+      box-shadow: 0px 4px 20px 0px #0000001A;
+   }
+
+   &__title {
+      font-size: 20px;
+      text-align: center;
+   }
+
+   &__btn-close {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      outline: transparent;
+      transition: all 0.5s ease;
+       
+      &:hover{
+         color:$color-hover;
+      }
+      
+   }
+}

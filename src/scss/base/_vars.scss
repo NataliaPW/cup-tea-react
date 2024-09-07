@@ -1,0 +1,32 @@
+
+//для исправления ошибки в fansybox
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
+
+//переменные media
+$maxWidth:1920;
+$maxWidthContainer: 1230;
+$md0:1230px;
+$md1:1230.98px;
+$md10:1228.98px;
+$md5:1170.98px;
+$md6:597.98px;
+$md2:991.98px;
+$md3:767.98px;
+$md4:479.98px;
+$md7:375.98px;
+
+$hd1:911.98px;
+$hd2:767.98px;
+$hd3:319.98px;
+
+
+$minWidth:320px;
+$md1:$maxWidthContainer+15;
+
+//outputStyle: 'expanded' //compressed - сжатый, expanded - не сжатый файл

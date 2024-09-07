@@ -1,0 +1,40 @@
+/*
+                  &::after{
+      content: "";
+      width: 100%;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background-color: $color-bg;
+      filter: opacity(0.7) blur(3px);
+      position: absolute;
+    }
+                  */
+
+//?   @include after-bg(0%,0%,100%,100%,1,rgba($color-black,0.5),0.5,1);
+
+@mixin after-bg($top,$left,$width,$height,$color,$bgcolor,$opacity,$Zindex) {
+
+
+       &::after{
+      content: "";
+      width: #{$width};
+      top: #{$top};
+      left: #{$left};
+      height: #{$height};
+      opacity: #{$opacity};  
+      position: absolute;
+      z-index: #{$Zindex};
+
+      @if($color==1) {
+background-color: #{$bgcolor};
+      }
+      @if($color==2) {
+background: #{$bgcolor};
+      }
+    }
+
+  @content;
+}
+
+//1-цвет, 2-градиент

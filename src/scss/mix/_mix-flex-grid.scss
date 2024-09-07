@@ -1,0 +1,94 @@
+@mixin varGridColumnGap-adopt($max-sz, $min-sz) {
+   @media (min-width: 767px) {
+      --grid-column-gap: calc(#{$min-sz}px + (#{$max-sz} - #{$min-sz}) * (100vw / #{$maxWidth}));
+   }
+
+   @media (max-width: 767px) {
+      --grid-column-gap: calc(#{$min-sz}px + 1.7 * (#{$max-sz} - #{$min-sz}) * ((100vw - 320px) / #{$maxWidth}));
+   }
+}
+
+@mixin var-adopt($var,$max-sz, $min-sz) {
+   @media (min-width: 767px) {
+      $var: calc(#{$min-sz}px + (#{$max-sz} - #{$min-sz}) * (100vw / #{$maxWidth}));
+   }
+
+   @media (max-width: 767px) {
+      $var: calc(#{$min-sz}px + 1.7 * (#{$max-sz} - #{$min-sz}) * ((100vw - 320px) / #{$maxWidth}));
+   }
+}
+
+
+/*подключение flex*/
+
+@mixin flex($justify, $column, $aling, $wrap) {
+   display: flex;
+
+   @if ($justify==1) {
+      justify-content: space-between;
+   }
+
+   @else if($justify==2) {
+      justify-content: center;
+   }
+
+   @else if($justify==3) {
+      justify-content: end;
+   }
+
+   @else if($justify==4) {
+      justify-content: start;
+   }
+
+   @else if($justify==5) {
+      justify-content: space-around;
+   }
+
+   @else if($justify==6) {
+      justify-content: flex-end;
+   }
+
+   @if ($column==1) {
+      flex-direction: column;
+   }
+
+   @if ($aling==1) {
+      align-items: center;
+   }
+
+   @if ($aling==2) {
+      align-items: flex-end;
+   }
+
+   @if ($aling==3) {
+      align-items: end;
+   }
+
+   @if ($wrap==1) {
+      flex-wrap: wrap;
+   }
+
+   @if ($wrap==2) {
+      flex-wrap: nowrap;
+   }
+
+   @content;
+}
+
+/* @include flex(0, 0, 0 ,0);
+1 -space-between
+2 - center
+3-  end;
+4 - start
+5 - space-around
+6-justify-content: flex-end;
+
+1 - flex-direction: column;
+
+1-align-items: center;
+2- align-items: flex-end;
+3- align-items: end;
+
+1- flex-wrap: wrap;
+ flex-wrap: nowrap;
+*/

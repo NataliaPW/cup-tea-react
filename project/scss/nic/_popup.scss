@@ -1,0 +1,209 @@
+.popup {
+   position: relative;
+   background-color: rgba($color-bg-100, 1) !important;
+
+
+   @media (max-width: $md3) {
+      padding-top: 30px !important;
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+      padding-bottom: 15px !important;
+   }
+
+   /*          &::before{ 
+               position: absolute;
+      content: "";
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+background-color: rgba($color-black,0.5);
+z-index: 1;
+   }*/
+
+   &__content-box {
+      @include p-adopt(15, 10, 1);
+      @include p-adopt(20, 15, 2);
+      @include p-adopt(20, 15, 3);
+      @include p-adopt(20, 15, 4);
+      position: relative;
+
+      /*
+        &:after{
+         position: absolute;
+      content: "";
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+z-index: 2;
+         background: rgba(255, 255, 255, 0.28);
+    backdrop-filter: blur(5px);
+   }
+*/
+   }
+
+   .fancybox-close-small {
+      svg {
+         color: rgba($color-bg, 1) !important;
+      }
+   }
+}
+
+.popupCard {
+
+   &__mainBox {
+      padding: 0 10px;
+   }
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+      z-index: 5;
+
+      @media (max-width:$md3) {
+         width: 90%;
+         margin: 0 auto;
+      }
+   }
+
+   &__title {
+      color: $color-hover;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-transform: capitalize;
+   }
+
+
+   &__name {
+      color: $color-hover;
+      font-size: 18px;
+      margin-bottom: 15px;
+      text-transform: capitalize;
+   }
+
+   &__bottom {
+      margin-top: 25px;
+
+      p:not(:last-child) {
+         margin-bottom: 15px;
+      }
+   }
+
+   &__text {
+      color: rgba($color-bg, 1);
+      line-height: 1.1;
+   }
+
+   /*
+    &__icon {
+      fill: $color-gold;
+      @include width-adopt(60, 40);
+      @include height-adopt(60, 40);
+      transition: fill .1s linear;
+      @include m-adopt(24, 20, 3);
+   }
+*/
+   &__img-box {
+      padding-bottom: 70%;
+      //   @include width-all-adopt(70, 100, 2);
+      margin: 25px auto;
+      width: 70%;
+   }
+
+   &__list-box {
+      display: flex;
+      gap: 5px;
+      flex-direction: column;
+   }
+
+   &__item-box {
+      display: flex;
+      gap: 5px;
+   }
+
+   &__item-name,
+   &__item-text {
+      margin-bottom: 0 !important;
+   }
+
+   &__item-name {
+      font-weight: 700;
+      display: inline-flex;
+   }
+
+   /*
+   &__mainSliderSwiperBox{
+        margin: 25px 0;
+   }
+
+    &__img-boxSlider{
+      padding-bottom: 70%;
+   }
+
+   &__gallery-list{
+      display: flex;
+flex-wrap: wrap;
+justify-content: center;
+   }
+
+   &__gallery-item{
+      width: calc(100% / 3);
+   }
+
+   &__gallery-img-box{
+      position: relative;
+      padding-bottom: 70%;
+   }
+
+   &__controlls{
+       margin-top: 40px;
+       }
+
+
+   &__dotts {
+      background: transparent;
+      opacity: 1;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      gap: 10px;
+       justify-content: center;
+     
+
+      span {
+         margin: 10px;
+         width: 11px;
+         height: 11px;
+         border-radius: 50%;
+         opacity: 1;
+         background: $color-main;
+      }
+
+      .swiper-pagination-bullet-active {
+         background: $color-hover;
+         position: relative;
+
+         &::after {
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: 50%;
+            width: 27px;
+            height: 27px;
+            border-radius: 50%;
+            border: 2px solid $color-hover;
+            transform: translate(-50%, -50%);
+         }
+      }
+
+      .swiper-button-disabled {
+         background-color: $color-hover;
+         color: $color-hover;
+      }
+   }
+   */
+}

@@ -1,0 +1,15 @@
+@mixin footerToBottom {
+   display: grid;
+   grid-template-columns: 100%;
+   grid-template-rows: auto 1fr auto;
+   min-height: 100vh;
+}
+
+
+@mixin pseudo() {
+   content: "";
+   display: block;
+}
+
+
+/* @include pseudo(); */

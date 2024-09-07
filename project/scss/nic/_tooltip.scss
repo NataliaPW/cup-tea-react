@@ -1,0 +1,39 @@
+//className="tooltip" data-tooltip="tasza_verstka_site"
+.tooltip {
+   $color-gray:rgba(197, 201, 199, 1);
+   border-bottom: 1px dotted $color-gray;
+  // cursor: help;
+  
+   @media (max-width: $md3) {
+    border-bottom-color:transparent;
+  }
+
+   &::after {
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 8px 8px 8px 0px;
+      box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+      color:$color-gray;
+      content: attr(data-tooltip);
+      //* Главная часть кода, определяющая содержимое всплывающей подсказки */
+      margin-top: -27px;
+      opacity: 0;
+      //* Наш элемент прозрачен... */
+      padding: 3px 7px;
+      position: absolute;
+      visibility: hidden;
+      //* ...и скрыт. */
+
+      transition: all 0.4s ease-in-out;
+      //* Добавить плавности по вкусу */
+
+      @media (max-width: $md3) {
+  display: none;
+  }
+   }
+
+   &:hover::after {
+      opacity: 1;
+      //* Показываем его */
+      visibility: visible;
+   }
+}

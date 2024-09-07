@@ -1,0 +1,39 @@
+$color-error:rgb(222, 32, 32);
+$color-success:rgb(2, 172, 2);
+
+.notification {
+   position: fixed;
+   left: 50%;
+   @include pos-adopt(50, 25, 3);
+  // @include pos-adopt(50, 25, 2);
+   color: #fff;
+ @include font-size-adopt(18, 14);
+ //  font-weight: 800;
+   @include border-radius-adopt(16, 10);
+   @include p-adopt(32, 12, 1);
+   @include p-adopt(32, 12, 2);
+   @include p-adopt(32, 12, 3);
+   @include p-adopt(32, 12, 4);
+   z-index: 1000;
+   opacity: 0;
+   transform: translateX(100%);
+    cursor: default;
+    max-width: 90%;
+    min-width: 300px;
+    text-align: center;
+
+   &__show {
+      opacity: 1;
+      transform: translateX(-50%);
+   }
+
+   &__success {
+    //  background: $color-success url('../images/icon/check.svg') no-repeat right 32px center/36px;
+    //  @include p-adopt(72, 40, 2);
+     background-color: $color-success;
+   }
+
+   &__error {
+      background-color: $color-error;
+   }
+}

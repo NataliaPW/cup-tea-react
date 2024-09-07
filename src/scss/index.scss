@@ -1,0 +1,21 @@
+@import 'base/vars';
+@import 'base/fonts'; 
+@import 'base/fontsVar'; 
+@import 'base/color'; 
+@import 'base/mix';
+@import 'base/font-size';
+@import 'base/reset';
+@import 'base/global';
+@import 'base/notification';
+@import'skiletonLoader';
+@import 'header';
+@import 'main-content';
+@import 'goods';
+@import 'card';
+@import 'cartModal';
+@import 'footer';
+@import 'base/copy';
+
+//@import 'valid';
+
+//@use 'base/copy' as *;

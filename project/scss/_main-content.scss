@@ -1,0 +1,128 @@
+.main-content {
+   position: relative;
+   // @include after-bg(0%,0%,100%,100%,1,$color-bg,0.5,1);
+   background-color: $color-green;
+   backdrop-filter: blur(60px);
+   color: $color-bg;
+   @include p-adopt(100, 50, 1);
+   min-height: 610px;
+
+
+   height: calc(var(--vh, 1vh) * 60);
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+
+   @include media(1, $md5) {
+      height: calc(var(--vh, 1vh) * 65);
+   }
+
+   @include media(1, $md2) {
+      //  height: calc(var(--vh, 1vh) * 58);
+      height: auto;
+      min-height: auto;
+   }
+
+   @include media(1, $md3) {
+      // height: auto;
+      // height: calc(var(--vh, 1vh) * 100);
+   }
+
+
+   .ibg {
+      background-position: bottom;
+
+      @include media(1, $md10) {
+         background-size: contain;
+      }
+
+      @include media(1, $md3) {
+         position: relative;
+         @include icon-size-aspectRatio(315, 145, 483);
+      }
+   }
+
+   &__container {
+      height: 100%;
+      position: relative;
+
+      display: flex;
+      @include gap-all-adopt(10, 5, 2);
+      @include gap-all-adopt(40, 30, 3);
+
+      @include media(1, $md3) {
+         flex-direction: column;
+         align-items: center;
+         justify-content: flex-end;
+      }
+   }
+
+   &__text-box {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      @include gap-all-adopt(60, 24, 1);
+      width: calc(788/1230*100%);
+
+      @include p-adopt(80, 40, 1);
+      @include p-adopt(80, 40, 3);
+
+      @include media(1, $md10) {
+         width: 60%;
+      }
+
+
+      @include media(1, $md3) {
+         width: 100%;
+
+         &:not(:last-child) {
+            padding-bottom: 0 !important;
+         }
+      }
+   }
+
+
+   &__item-img {
+      position: relative;
+      max-width: 45%;
+      @include m-adopt(80, 10, 2);
+      // min-width: 400px;
+      min-width: 315px;
+
+      @include media(1, $md2) {
+         margin-right: -15px !important;
+         max-width: 62%;
+      }
+
+      @include media(1, $md3) {
+         max-width: 100%;
+         margin-top: 20px;
+         //  min-width: 315px;
+      }
+   }
+
+   &__image-bg {
+      @include media(1, $md3) {
+         margin: 0 auto;
+      }
+   }
+
+   &__title {
+      line-height: 1.1;
+      @extend %asz80;
+      animation: zoomIn 1.5s;
+   }
+
+   &__btn {
+      margin-right: auto;
+      animation: zoomIn 2s;
+   }
+}
+
+@keyframes zoomIn {
+   from {
+      transform: scale3d(0, 0, 0);
+   }
+}

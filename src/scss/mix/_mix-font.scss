@@ -1,0 +1,13 @@
+/*подключение шрифтов*/
+/* миксин в _font.scss */
+
+//адаптив размера шрифта
+@mixin font-size-adopt($max-sz, $min-sz) {
+   @media (min-width: 767px) {
+      font-size: calc(#{$min-sz}px + (#{$max-sz} - #{$min-sz}) * (100vw / #{$maxWidth}));
+   }
+
+   @media (max-width: 767px) {
+      font-size: calc(#{$min-sz}px + 1.7 * (#{$max-sz} - #{$min-sz}) * ((100vw - 320px) / #{$maxWidth}));
+   }
+}

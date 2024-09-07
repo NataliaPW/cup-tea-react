@@ -1,0 +1,145 @@
+
+$color-copy:#e5e8ec;
+$font-copy: 'Chivo', sans-serif;
+$color-background:darken(#6cb9ab,20%);
+$color-copy-hover:#9d6d0f;
+$color-icon:rgba(#b5a263,0.6);
+
+
+.copy {
+   @include p-adopt(15, 10, 1);
+   @include p-adopt(15, 10, 3);
+   background-color: $color-background;
+   margin-top: -2px;
+   position: relative;
+   z-index: 3;
+  
+
+   &__text {
+      text-align: center;
+      color: $color-copy;
+      font-size: 18px;
+    //  @include font-size-adopt(18, 15);
+      font-family: $font-copy;
+   }
+
+   &__list{
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap:15px;
+
+ @media (max-width: $md6) {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+   }
+
+   &__item{
+      &:first-child{
+         display: flex;
+align-items: center;
+gap:15px;
+
+  @media (max-width: $md6) {
+        justify-content: center;
+      }
+      }
+
+          @media (max-width: $md6) {
+         width: 100%;
+      }
+   }
+}
+
+.copy-logo {
+   transition: all 0.5s ease;
+   display: flex;
+    align-items: center;
+    gap: 5px;
+
+   &:hover,
+   &.active {
+      .copy-logo{
+         &__text {
+         filter: drop-shadow(1px 1px 1px $color-copy-hover);
+         color: #fff;
+      }
+
+            &__icon{
+         fill:#fff;
+         filter: drop-shadow(1px 1px 1px $color-copy-hover);
+      }
+   }
+   }
+
+   &__icon{
+      width: 20px;
+      height: 18px;
+      fill:$color-icon;
+      stroke:none;
+   }
+
+   &__text{
+      color:rgba(#fff,0.6);
+   }
+}
+
+.copy-contacts {
+   &__list {
+      display: flex;
+      align-items: center;
+      @include gap-all-adopt(20, 15, 1);
+
+       @media (max-width: $md6) {
+        justify-content: center;
+      }
+   }
+
+   &__item {}
+
+   &__link {
+      outline: transparent;
+      transition: all 0.2s ease;
+      font-weight: 500;
+      letter-spacing: 1px;
+
+      &:hover,
+      &:active {
+         .copy-contacts{
+            &__icon {
+            stroke-dashoffset: 0;
+            fill: none;
+            animation: copy-scale 5s infinite linear;
+         }
+         }
+      }
+   }
+
+   &__icon {
+      width: 24px;
+      height: 24px;
+      fill: $color-icon;
+      overflow: visible;
+      stroke: $color-icon;
+      stroke-width: 1;
+      stroke-dasharray: 8000;
+      stroke-dashoffset: 8000;
+      outline: transparent;
+      transition: all 0.5s ease;
+   }
+}
+
+@keyframes copy-scale {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,72 @@
+.simplebar-track.simplebar-vertical {
+	background-color: #d9d9d9;
+	width: 5px;
+}
+
+.simplebar-content-wrapper {
+	padding-right: 5px;
+}
+
+.simplebar-scrollbar{
+  
+   &::before {
+
+
+	left: 0;
+	top: 0;
+	right: -3px;
+	bottom: 0;
+	opacity: 1;
+   background-color: $color-hover;
+	border-radius: 0;
+}
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar::before {
+	top: 0;
+	bottom: 0;
+}
+
+.simplebar-scrollbar.simplebar-visible::before {
+	opacity: 1;
+}
+
+//.simplebar-scrollbar .simplebar-visible{
+   // height: 204px;
+   // transform: translate3d(0px, 0px, 0px);
+   // display: block;
+//}
+
+.simplebar-offset{
+       right: 1px;
+    bottom: 1px;
+}
+
+/*html
+  href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
+   <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+
+    <noscript>
+  <style>
+    .simplebar-content-wrapper {
+      scrollbar-width: auto;
+      -ms-overflow-style: auto;
+    }
+
+    .simplebar-content-wrapper::-webkit-scrollbar,
+    .simplebar-hide-scrollbar::-webkit-scrollbar {
+      display: initial;
+      width: initial;
+      height: initial;
+    }
+  </style>
+</noscript>
+
+//init
+//new SimpleBar(объект);
+//data-simplebar
+
+//css
+overflow-y: auto;
+    height: 50%;
+*/

@@ -1,0 +1,124 @@
+.footer {
+   &__top {
+      background-color: $color-green;
+      @include p-adopt(60, 40, 1);
+      @include p-adopt(60, 40, 3);
+      color: $color-bg;
+   }
+
+   &__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @include gap-all-adopt(50, 25, 3);
+
+      @include media(1, $md3) {
+         flex-direction: column;
+         align-items: flex-start;
+      }
+   }
+
+   &__list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include gap-all-adopt(50, 15, 2);
+      @include gap-all-adopt(30, 10, 3);
+
+      @include media(1, $md3) {
+       //  flex-direction: column;
+       flex-wrap:wrap;
+         align-items: flex-start;
+      }
+   }
+
+   &__link {
+      transition: all 0.5s ease;
+
+      &:hover,
+      &.active {
+         .footer {
+            &__text {
+               color: $color-hover;
+
+               &::after {
+                  width: 100%;
+                  left: 0;
+               }
+            }
+         }
+      }
+   }
+
+   &__text {
+      @extend %asz20;
+      font-weight: 400;
+
+      // text-transform: uppercase;
+      position: relative;
+
+      &::after {
+         position: absolute;
+         content: "";
+         left: 50%;
+         bottom: 0;
+         width: 0;
+         height: 1px;
+         background-color: $color-hover;
+         transition: all 0.5s ease;
+      }
+   }
+
+   &__address {
+      display: flex;
+      flex-direction: column;
+      @include gap-all-adopt(20, 15, 1);
+   }
+}
+
+.social {
+   display: flex;
+   align-items: center;
+   @include gap-all-adopt(30, 20, 1);
+
+   &__link{
+   outline: transparent;
+   transition: all 0.5s ease;
+
+   &:hover {
+      .social {
+         &__icon {
+            fill: $color-hover;
+         }
+      }
+   }
+}
+
+   &__item {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   &__icon {
+      fill: $color-bg;
+
+      &--1 {
+         width: 32px;
+         height: 32px;
+      }
+
+      &--2 {
+         width: 28px;
+         height: 20px;
+      }
+
+      &--3 {
+         width: 26px;
+         height: 26px;
+      }
+   }
+}

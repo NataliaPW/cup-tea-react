@@ -1,0 +1,100 @@
+/*
+                     <button className="menu__btn-burger btn-burger" type="button" aria-label="button menu" id="menuBtn">
+                        <span className="btn-burger__btn-line"></span>
+                     </button>
+                  */
+
+//?   @include btn-burger(42, 20, $md2,$color-main,transparent,$color-main, $color-hover,2,100%,100%,100%,100%,left);
+
+@mixin btn-burger($widthBtn,$heightBtn,$md,$colorBorderBtn,$colorBorderBtn-hover,$color-main, $color-hover,$heightLine,$widthLine1,$widthLine2,$widthLine3,$widthLine-hover,$side) {
+
+  // $paddingBtn:calc(#{$widthBtn} * calc(calc(100% - #{$widthLine-hover}) / calc(2*100%)));
+  $paddingBtn:2;
+
+.btn-burger {
+   width: #{$widthBtn}px;
+   height: #{$heightBtn}px;
+   border:1px solid #{$colorBorderBtn};
+   display: block;
+   cursor: pointer;
+   position: relative;
+   background-color: transparent;
+   outline: transparent;
+   transition: all 0.5s ease;
+
+   @media (min-width: #{$md}) {
+      display: none;
+   }
+
+   @media (max-width: #{$md}) {
+      display: block;
+   }
+
+    &__btn-line {
+      width: #{$widthLine2};
+   }
+
+   &__btn-line,
+   &::before,
+   &::after {
+      display: none;
+      height: #{$heightLine}px;
+      background-color:#{$color-main};
+      position: absolute;
+      z-index: 15;
+      #{$side}:  #{$paddingBtn}px;
+      content: "";
+      transition: top 0.3s ease-in-out, bottom 0.3s ease-in, transform 0.3s ease;
+   }
+
+   &::before {
+      top:  #{$paddingBtn}px;
+       width: #{$widthLine1};
+   }
+
+   &::after {
+      bottom: #{$paddingBtn}px;
+       width: #{$widthLine3};
+   }
+
+      &__btn-line {
+      top: calc(50% - 0.5*#{$heightLine}px);
+   }
+
+   &--active {
+       border-color:#{$colorBorderBtn-hover} !important;
+
+.btn-burger{
+         &__btn-line {
+         display: none;
+      }
+   }
+
+      &::before,
+      &::after {
+         background-color: #{$color-hover};
+          width: #{$widthLine-hover};
+      }
+
+      &::before {
+         transform: rotate(-225deg);
+         top: calc(50% - 1px);
+      }
+
+      &::after {
+         transform: rotate(225deg);
+         bottom: calc(50% - 1px);
+      }
+   }
+
+   &__btn-line,
+   &::before,
+   &::after {
+      @media (max-width: #{$md}) {
+      display: block;
+   }
+}
+}
+   
+  @content;
+}

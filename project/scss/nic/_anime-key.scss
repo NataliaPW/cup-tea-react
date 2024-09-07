@@ -1,0 +1,190 @@
+/* анимация телефона */
+ // animation: phone 0.5s infinite linear;
+
+  @keyframes phone {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  100% {
+    transform: rotate(10deg) scale(0.5);
+  }
+} 
+
+/* анимация эл.почты */
+//  animation: mail 0.5s infinite linear;
+
+@keyframes mail {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  }
+
+  100% {
+    transform: translate3d(-50%, -96%, 0) rotate(360deg) scale(0.2);
+  }
+}
+   
+//смещение по оси X
+//animation: translateX 2s infinite linear;
+
+@keyframes translateX {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* анимация поднятия на карточке затемнения-панели*/
+//   transform: translateY(-100%);
+//      animation: transform-up 0.5s;
+@keyframes transform-up {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+//кнопка ожидания
+
+@keyframes rotate {
+  0% {}
+
+  100% {
+      transform:rotate(-360deg);  
+  }
+}
+
+@keyframes rotate-arrow {
+ 0% {}
+
+  100% {
+      transform:rotate(360deg);  
+  }
+}
+//!yвеличение-yменьшение
+//? animation: scale 2s infinite linear;
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+//  animation: scroll-link-right 4s infinite ease;
+@keyframes scroll-link-right {
+  0% {
+    right: 0;
+  }
+
+  50% {
+    right: -20px;
+  }
+
+  100% {
+    right: 0;
+  }
+}
+
+//  animation: scroll-link-bottom 4s infinite ease;
+@keyframes scroll-link-bottom {
+  0% {
+    bottom: 0;
+  }
+
+  50% {
+    bottom: -20px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+
+//  animation: rotate-round 4s infinite ease;
+/*
+@keyframes rotate-round {
+  0% {
+  }
+
+  50% {
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+*/
+//анимация ковычек цитаты
+/*&__text {
+  position: relative;
+  quotes: "‘" "’" "“" "”";
+&::before,
+&::after {
+  animation: dancing 1s linear infinite;
+  display: inline-block;
+  transform: rotate(13deg);
+}
+}*/
+/*   quotes: "\00ab" "\00bb"; /* Кавычки в виде двойных угловых скобок */
+   
+
+/*оформление цитаты в HTML
+<figure className="quote">
+  <blockquote className="quote__text">
+    But web browsers aren’t like web servers. If your back-end code is getting so big that it’s starting to run noticably slowly, you can throw more computing power at it by scaling up your server. That’s not an option on the front-end where you don’t really have one run-time environment—your end users have their own run-time environment with its own constraints around computing power and network connectivity.
+  </blockquote>
+  <figcaption>
+    — Jeremy Keith, <cite>Mental models</cite>
+   </figcaption>
+</figure>
+*/
+@keyframes dancing {
+  0% {
+    transform: rotate(13deg) scale(2);
+  }
+
+  25% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-13deg) scale(2);
+  }
+
+  75% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(13deg) scale(2);
+  }
+}
+//анимация текста
+   &__image-title {
+      @include icon-size-aspectRatio(329, 125, 235);
+      animation: zoomIn 1.5s;
+   }
+
+@keyframes zoomIn {
+   from {
+      transform: scale3d(0, 0, 0);
+   }
+}

@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="keywords"
+      content="Портфолио AneliaWEB. Высокотехнологичный web-сайт, разработанный на базе представленного web-дизайна, предназначенный для продажи продуктов питания">
+
+   <meta name="description"
+      content="Портфолио AneliaWEB. Высокотехнологичный web-сайт, разработанный на базе представленного web-дизайна, предназначенный для продажи продуктов питания">
+   <meta name="Copyright" content="(C) 2024 AneliaWEB">
+
+   <!--Favicon-->
+   <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+   <link rel="icon" type="image/png" sizes="192x192" href="./images/favicon/android-chrome-192x192.png">
+   <link rel="icon" type="image/png" sizes="512x512" href="./images/favicon/android-chrome-512x512.png">
+   <link rel="icon" type="image/png" href="./images/favicon/safari-pinned-tab.svg">
+   <link rel="manifest" href="./site.webmanifest">
+   <link rel="mask-icon" href="./images/favicon/safari-pinned-tab.svg" color="#b5a263">
+   <meta name="msapplication-TileColor" content="#b91d47">
+   <meta name="theme-color" content="#ffffff">
+
+   <link rel="shortcut icon" href="./images/favicon/favicon.ico" type="image/x-icon">
+
+
+   <title>Корзина Cup time</title>
+
+   <!--font-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@500&display=swap" rel="stylesheet">
+
+
+   <!--<link rel="preload" href="/fonts/arial.woff2" as="font" type="font/woff2" crossorigin>-->
+
+   <!--<link rel="preload" href="/images/header/img1.webp" as="image">
+   <link rel="preload" href="/images/header/img1.jpg" as="image">-->
+
+
+   <link rel="stylesheet" href="scss/index.scss">
+
+   <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous" defer></script>
+   <script src="./jQuery/topmenu.js" defer></script>
+
+   <script type="module" src="js/index.js"></script>
+</head>
+
+<body>
+   <div class="body__mainwrapper">
+      <header class="header" id="header">
+         <div class="header__top">
+            <div class="header__container header__container--green">
+               <div class="header__menu menu">
+                  <a class="menu__logo logo" href="./index.html" aria-label="logo">
+                     <img class="logo__icon" src="./images/icon/logo.svg" alt="logo" width="102" height="67">
+                  </a>
+
+                  <div class="menu__nav">
+                     <ul class="menu__list filter">
+                        <li class="menu__item filter__item">
+                           <button class="menu__link filter__btn active" type="button">
+                              <span class="menu__text filter__text">Чай</span>
+                           </button>
+                        </li>
+                        <li class="menu__item filter__item">
+                           <button class="menu__link filter__btn" type="button">
+                              <span class="menu__text filter__text">Кофе</span>
+                           </button>
+                        </li>
+                        <li class="menu__item filter__item">
+                           <button class="menu__link filter__btn" type="button">
+                              <span class="menu__text filter__text">Чайники</span>
+                           </button>
+                        </li>
+                        <li class="menu__item filter__item">
+                           <button class="menu__link filter__btn" type="button">
+                              <span class="menu__text filter__text">Турки</span>
+                           </button>
+                        </li>
+                        <li class="menu__item filter__item">
+                           <button class="menu__link filter__btn" type="button">
+                              <span class="menu__text filter__text">Прочее</span>
+                           </button>
+                        </li>
+                     </ul>
+                  </div>
+
+                  <div class="menu__btn-box">
+                     <a class="menu__cart cart" href="#">
+                        <svg class="cart__icon" fill="none" viewBox="0 0 28 29" xmlns="http://www.w3.org/2000/svg">
+                           <path
+                              d="M23.287 10.953c-.782-.863-1.96-1.365-3.594-1.54v-.886a5.683 5.683 0 0 0-1.866-4.212 5.655 5.655 0 0 0-4.387-1.458c-2.788.268-5.133 2.963-5.133 5.88v.676c-1.634.175-2.812.677-3.594 1.54-1.131 1.26-1.096 2.94-.968 4.107l.817 6.498c.245 2.275 1.166 4.609 6.183 4.609h6.51c5.017 0 5.938-2.334 6.183-4.597l.817-6.522c.128-1.155.152-2.835-.968-4.095Zm-9.684-6.475a4.063 4.063 0 0 1 4.469 4.049v.816H9.928v-.606c0-2.077 1.715-4.072 3.675-4.259Z" />
+                           </svg>
+
+                        <span class="cart__count">6</span>
+                     </a>
+
+                     <button class="menu__btn-burger btn-burger" type="button" aria-label="button menu" id="menuBtn">
+                        <span class="btn-burger__btn-line"></span>
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+
+      <main class="main" id="main">
+        
+         <section class="cartModal">
+            <div class="cartModal__container">
+               <div class="cartModal__top">
+                  <div class="cartModal__goods goods">
+               <h2 class="goods__title title">
+                  <span class="goods__title text">
+                     Корзина
+                  </span>
+                  <span class="goods__count">
+                     (6)
+                  </span>
+               </h2>
+
+                <ul class="goods__list">
+                  <li class="goods__item card">
+                     <article class="card__article">
+                        <picture class="card__image-box image__box">
+                           <source class="card__image image lazyload" data-srcset="./images/product/img1.webp"
+                              srcset="./images/product/img01.jpg" type="image/webp">
+                           <img class="card__image image lazyload" data-src="./images/product/img1.jpg"
+                              src="./images/product/img01.jpg" alt="foto">
+                        </picture>
+
+                        <div class="card__text-box">
+                           <h3 class="card__name">
+                              Кокосовая матча
+                           </h3>
+
+                           <div class="card__count count">
+                              <button class="count__btn btn btn--gray" type="button">-</button>
+                              <input type="number" class="count__input" name="countNumber" value="1">
+                              <button class="count__btn btn btn--gray" type="button">+</button>
+                           </div>
+
+                           <p class="card__price-box">
+                              <span class="card__price">
+                                 300
+                              </span>
+                              <span class="card__current">
+                                 BYN
+                              </span>
+                           </p>
+                        </div>
+                     </article>
+                  </li>
+                  <li class="goods__item card">
+                     <article class="card__article">
+                        <picture class="card__image-box image__box">
+                           <source class="card__image image lazyload" data-srcset="./images/product/img1.webp"
+                              srcset="./images/product/img01.jpg" type="image/webp">
+                           <img class="card__image image lazyload" data-src="./images/product/img1.jpg"
+                              src="./images/product/img01.jpg" alt="foto">
+                        </picture>
+
+                        <div class="card__text-box">
+                           <h3 class="card__name">
+                              Кокосовая матча
+                           </h3>
+
+                           <div class="card__count count">
+                              <button class="count__btn btn btn--gray" type="button">-</button>
+                              <input type="number" class="count__input" name="countNumber" value="1">
+                              <button class="count__btn btn btn--gray" type="button">+</button>
+                           </div>
+
+                           <p class="card__price-box">
+                              <span class="card__price">
+                                 300
+                              </span>
+                              <span class="card__current">
+                                 BYN
+                              </span>
+                           </p>
+                        </div>
+                     </article>
+                  </li>
+                  <li class="goods__item card">
+                     <article class="card__article">
+                        <picture class="card__image-box image__box">
+                           <source class="card__image image lazyload" data-srcset="./images/product/img1.webp"
+                              srcset="./images/product/img01.jpg" type="image/webp">
+                           <img class="card__image image lazyload" data-src="./images/product/img1.jpg"
+                              src="./images/product/img01.jpg" alt="foto">
+                        </picture>
+
+                        <div class="card__text-box">
+                           <h3 class="card__name">
+                              Кокосовая матча
+                           </h3>
+
+                           <div class="card__count count">
+                              <button class="count__btn btn btn--gray" type="button">-</button>
+                              <input type="number" class="count__input" name="countNumber" value="1">
+                              <button class="count__btn btn btn--gray" type="button">+</button>
+                           </div>
+
+                           <p class="card__price-box">
+                              <span class="card__price">
+                                 300
+                              </span>
+                              <span class="card__current">
+                                 BYN
+                              </span>
+                           </p>
+                        </div>
+                     </article>
+                  </li>
+                  <li class="goods__item card">
+                     <article class="card__article">
+                        <picture class="card__image-box image__box">
+                           <source class="card__image image lazyload" data-srcset="./images/product/img1.webp"
+                              srcset="./images/product/img01.jpg" type="image/webp">
+                           <img class="card__image image lazyload" data-src="./images/product/img1.jpg"
+                              src="./images/product/img01.jpg" alt="foto">
+                        </picture>
+
+                        <div class="card__text-box">
+                           <h3 class="card__name">
+                              Кокосовая матча
+                           </h3>
+
+                           <div class="card__count count">
+                              <button class="count__btn btn btn--gray" type="button">-</button>
+                              <input type="number" class="count__input" name="countNumber" value="1">
+                              <button class="count__btn btn btn--gray" type="button">+</button>
+                           </div>
+
+                           <p class="card__price-box">
+                              <span class="card__price">
+                                 300
+                              </span>
+                              <span class="card__current">
+                                 BYN
+                              </span>
+                           </p>
+                        </div>
+                     </article>
+                  </li>
+                  <li class="goods__item card">
+                     <article class="card__article">
+                        <picture class="card__image-box image__box">
+                           <source class="card__image image lazyload" data-srcset="./images/product/img1.webp"
+                              srcset="./images/product/img01.jpg" type="image/webp">
+                           <img class="card__image image lazyload" data-src="./images/product/img1.jpg"
+                              src="./images/product/img01.jpg" alt="foto">
+                        </picture>
+
+                        <div class="card__text-box">
+                           <h3 class="card__name">
+                              Кокосовая матча
+                           </h3>
+
+                           <div class="card__count count">
+                              <button class="count__btn btn btn--gray" type="button">-</button>
+                              <input type="number" class="count__input" name="countNumber" value="1">
+                              <button class="count__btn btn btn--gray" type="button">+</button>
+                           </div>
+
+                           <p class="card__price-box">
+                              <span class="card__price">
+                                 300
+                              </span>
+                              <span class="card__current">
+                                 BYN
+                              </span>
+                           </p>
+                        </div>
+                     </article>
+                  </li>
+                  <li class="goods__item card">
+                     <article class="card__article">
+                        <picture class="card__image-box image__box">
+                           <source class="card__image image lazyload" data-srcset="./images/product/img1.webp"
+                              srcset="./images/product/img01.jpg" type="image/webp">
+                           <img class="card__image image lazyload" data-src="./images/product/img1.jpg"
+                              src="./images/product/img01.jpg" alt="foto">
+                        </picture>
+
+                        <div class="card__text-box">
+                           <h3 class="card__name">
+                              Кокосовая матча
+                           </h3>
+
+                           <div class="card__count count">
+                              <button class="count__btn btn btn--gray" type="button">-</button>
+                              <input type="number" class="count__input" name="countNumber" value="1">
+                              <button class="count__btn btn btn--gray" type="button">+</button>
+                           </div>
+
+                           <p class="card__price-box">
+                              <span class="card__price">
+                                 300
+                              </span>
+                              <span class="card__current">
+                                 BYN
+                              </span>
+                           </p>
+                        </div>
+                     </article>
+                  </li>
+               </ul>
+               </div>
+
+               <div class="cartModal__form-box form__box">
+                  <div class="form__price price-box">
+                     <p class="price-box__name">Итого:</p>
+                     <p class="price-box__price">
+                        <span class="price-box__number">1596</span>
+                        <span class="price-box__current">BYN</span>
+                     </p>
+                  </div>
+                  <button class="form__btn btn btn--pink" form="form-delivery" type="submit">
+                     Заказать
+                  </button>
+               </div>
+            </div>
+            <form class="cartModal__form form" id="form-delivery">
+                <legend class="form__title title">
+                  Доставка
+               </legend>
+
+               <ul class="form__list">
+                  <li class="form__item">
+                      <label for="name" class="form__label sr-only">имя</label>
+                        <input type="text" class="form__input" name="name" id="name" placeholder="Имя"
+                           autocomplete="off" required>
+                  </li>
+                  <li class="form__item">
+                        <label for="phone" class="form__label sr-only">Телефон</label>
+                        <input type="tel" class="form__input form__field--phone" name="phone" id="phone"
+                           placeholder="Телефон" autocomplete="off" required>
+                     </li>
+                     <li class="form__item">
+                      <label for="address" class="form__label sr-only">Адрес</label>
+                        <input type="text" class="form__input" name="address" id="address" placeholder="Адрес"
+                           autocomplete="off" required>
+                  </li>
+               </ul>
+
+               <fieldset class="form__radio-box radio-box">
+                  <legend class="radio-box__title">Оплата:</legend>
+
+                   <ul class="radio-box__list">
+                  <li class="radio-box__item radio">
+                        <input class="radio__input" name="paymentMethod" id="cardpay" value="Картой"
+                           type="radio" required checked>
+                           <label for="cardpay" class="radio__label">
+                              <span class="radio__label-check"></span>
+                              <span class="radio__label-text">Картой</span>
+                           </label>
+                  </li>
+                  <li class="radio-box__item radio">
+                        <input class="radio__input" name="paymentMethod" id="cashpay" value="Наличными"
+                           type="radio" required>
+                           <label for="cashpay" class="radio__label">
+                              <span class="radio__label-check"></span>
+                              <span class="radio__label-text">Наличными</span>
+                           </label>
+                  </li>
+               </ul>
+               </fieldset>
+            </form>
+            </div>
+         </section>
+      </main>
+      <footer class="footer" id="footer">
+         <div class="footer__top">
+            <div class="footer__container">
+               <a class="footer__logo logo" href="#body" data-scroll="#body" aria-label="logo">
+                  <img class="logo__icon" src="./images/icon/logo.svg" alt="logo" width="102" height="67">
+               </a>
+
+               <nav class="footer__nav">
+                  <ul class="footer__list filter">
+                     <li class="footer__item filter__item">
+                        <button class="footer__link filter__btn" type="button">
+                           <span class="footer__text filter__text">Чай</span>
+                        </button>
+                     </li>
+                     <li class="footer__item filter__item">
+                        <button class="footer__link filter__btn" type="button">
+                           <span class="footer__text filter__text">Кофе</span>
+                        </button>
+                     </li>
+                     <li class="footer__item filter__item">
+                        <button class="footer__link filter__btn" type="button">
+                           <span class="footer__text filter__text">Чайники</span>
+                        </button>
+                     </li>
+                     <li class="footer__item filter__item">
+                        <button class="footer__link filter__btn" type="button">
+                           <span class="footer__text filter__text">Турки</span>
+                        </button>
+                     </li>
+                     <li class="footer__item filter__item">
+                        <button class="footer__link filter__btn" type="button">
+                           <span class="footer__text filter__text">Прочее</span>
+                        </button>
+                     </li>
+                  </ul>
+               </nav>
+
+               <address class="footer__address">
+                  <a href="mailto:aneliaweb@internet.ru&body=Здравствуйте" class="footer__link">
+                     <span class="footer__text">
+                        CUPTIME@gmail.com
+                     </span>
+                  </a>
+
+                  <ul class="footer__social social">
+                     <li class="social__item">
+                        <a class="social__link" href="tg://resolve?domain=@NataszaWP" aria-label="телеграм">
+                           <svg class="social__icon social__icon--1" viewBox="0 0 32 32" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M16 3C8.824 3 3 8.824 3 16s5.824 13 13 13 13-5.824 13-13S23.176 3 16 3Zm6.032 8.84c-.195 2.054-1.04 7.046-1.469 9.347-.182.975-.546 1.3-.884 1.339-.754.065-1.326-.494-2.054-.975-1.144-.754-1.794-1.222-2.899-1.95-1.287-.845-.455-1.313.286-2.067.195-.195 3.523-3.224 3.588-3.497a.26.26 0 0 0-.065-.234c-.078-.065-.182-.039-.273-.026-.117.026-1.937 1.235-5.486 3.627-.52.351-.988.533-1.404.52-.468-.013-1.352-.26-2.015-.481-.819-.26-1.456-.403-1.404-.858.026-.234.351-.468.962-.715 3.796-1.651 6.318-2.743 7.579-3.263 3.614-1.508 4.355-1.768 4.849-1.768.104 0 .351.026.507.156.13.104.169.247.182.351-.013.078.013.312 0 .494Z" />
+                              </svg>
+                        </a>
+                     </li>
+
+                     <li class="social__item">
+                        <a class="social__link" href="/"
+                           onclick="event.preventDefault();Notification.getInstance().show('Uuhh.. 404',false);"
+                           aria-label="youtube">
+                           <svg class="social__icon social__icon--2" viewBox="0 0 28 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="m11.334 14 6.92-4-6.92-4v8ZM26.747 3.56c.173.627.293 1.467.373 2.533.094 1.067.134 1.987.134 2.787l.08 1.12c0 2.92-.214 5.067-.587 6.44-.333 1.2-1.107 1.973-2.307 2.307-.626.173-1.773.293-3.533.373-1.733.093-3.32.133-4.787.133l-2.12.08c-5.586 0-9.066-.213-10.44-.586-1.2-.334-1.973-1.107-2.306-2.307-.174-.627-.294-1.467-.374-2.533a32.078 32.078 0 0 1-.133-2.787L.667 10c0-2.92.213-5.067.587-6.44.333-1.2 1.106-1.973 2.306-2.307C4.187 1.08 5.334.96 7.094.88A88.867 88.867 0 0 1 11.88.747L14 .667c5.587 0 9.067.213 10.44.586 1.2.334 1.974 1.107 2.307 2.307Z" />
+                              </svg>
+                        </a>
+                     </li>
+
+                     <li class="social__item">
+                        <a class="social__link" href="/"
+                           onclick="event.preventDefault();Notification.getInstance().show('Uuhh.. 404',false);"
+                           aria-label="vk">
+                           <svg class="social__icon social__icon--3" viewBox="0 0 26 26" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M13 0C5.82 0 0 5.82 0 13s5.82 13 13 13 13-5.82 13-13S20.18 0 13 0Zm5 14.667s1.15 1.135 1.432 1.661c.008.011.013.022.015.028.115.193.142.344.085.456-.094.187-.42.279-.53.287H16.97c-.14 0-.436-.037-.793-.283-.275-.192-.546-.508-.81-.815-.394-.458-.735-.853-1.08-.853a.413.413 0 0 0-.128.02c-.26.084-.593.455-.593 1.444 0 .308-.244.486-.416.486h-.93c-.317 0-1.968-.111-3.43-1.654C7 13.555 5.388 9.766 5.375 9.731c-.102-.245.108-.376.337-.376h2.051c.274 0 .363.166.426.314.073.172.34.856.781 1.625.714 1.254 1.151 1.763 1.502 1.763.066 0 .13-.018.188-.049.458-.254.372-1.886.352-2.225 0-.063-.001-.73-.236-1.05-.168-.23-.453-.319-.627-.351a.744.744 0 0 1 .27-.23c.314-.156.88-.18 1.442-.18h.313c.61.009.766.048.987.104.447.107.457.395.417 1.382-.012.28-.024.597-.024.971 0 .081-.004.168-.004.26-.014.503-.03 1.073.325 1.307.046.029.1.044.154.045.123 0 .494 0 1.5-1.724.31-.555.578-1.132.805-1.725.02-.036.08-.144.15-.186a.36.36 0 0 1 .168-.04h2.412c.263 0 .443.04.477.142.06.16-.011.652-1.112 2.143l-.492.649c-.998 1.308-.998 1.374.063 2.367Z" />
+                              </svg>
+                        </a>
+                     </li>
+                  </ul>
+               </address>
+            </div>
+         </div>
+         <div class="footer__copy copy">
+            <div class="copy__container">
+               <ul class="copy__list">
+                  <li class="copy__item">
+                     <span class="copy__text">&copy;&nbsp;<time datetime="2024">2024</time>&nbsp;</span>
+                     <a class="copy__link copy-logo" href="http://s29645vv.beget.tech/company/index.html">
+                        <svg class="copy-logo__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1166 1280">
+                           <path
+                              d="M571 16.2c-65.3 84.4-116.1 188.6-136.5 279.9-8.7 38.8-11.9 66.1-11.9 101.4-.1 29 .9 36.2 7.9 57.3 7.7 23 16.7 39 48.5 86.7 43.3 65 56.7 88.9 72.8 130 14.9 38.3 26.4 88.6 29.8 131 .9 11.7 1.8 9.2 3.8-10.7 4.3-42 14.6-84.9 29.8-123.5 8-20.4 25.7-55.5 38.2-75.8 5.5-8.8 19.5-30.2 31.1-47.6 30.9-46 40.7-63.2 48.8-84.9 11.5-30.9 13.3-62.8 6.7-114.5-12-93.1-51.6-192-115.3-287.5-15.3-22.9-40.1-56-41.9-56-.4 0-5.7 6.4-11.8 14.2zM208.5 494c-31.5 3.5-61 11.9-88 25-45.1 21.9-78.5 54.4-99.2 96.5C8.5 641.7.6 675.2.5 704c0 32.7 10.8 80.7 24.6 108.4C43.2 848.8 79.5 888 120.2 915c52.3 34.8 109.3 47.3 163.6 36 49.7-10.4 82-39.2 94-83.9 2.3-8.6 2.5-11.5 2.6-27.6 0-19.2-.9-25.2-5.9-40.1-10-29.8-31.7-53.2-57.2-61.9-32.5-11-71.7-.9-90.8 23.3-5.6 7-11.9 19.6-14.2 28.2-2.6 9.9-2.4 28.3.5 38.3 6.5 22.7 20.7 38.5 42.4 47.3 4.6 1.8 8.4 3.7 8.6 4.2.8 2.6-12.9 2.9-20.9.6-22.3-6.5-40.7-28.8-49.1-59.2-3-10.8-3.2-39.2-.4-49.7 4.9-18 12.8-31.8 26.1-45.1 33.4-33.7 78.7-43.3 135.1-28.9 30.7 7.9 60.2 23.2 85.7 44.5 29.6 24.8 50.1 58.9 57.7 95.8 1.1 5.5 2 11.4 2 13 0 5.9.7 6.4 5.3 4.1 10.7-5.5 35-12.4 50.5-14.4 3.9-.5 5.2-1.1 5.2-2.4 0-3.6-5.3-31.5-9.1-48.1-19.4-84.5-54.2-152.9-104-204.4-47.2-48.8-104.5-78.7-170.9-89.1-12.3-2-55.9-2.9-68.5-1.5zM900 494.1c-39.1 4.1-81 17.8-115.3 37.9C693 585.6 631 686.8 607.5 821c-1.4 7.9-2.5 15.2-2.5 16.1 0 1.3 1.3 1.9 5.3 2.4 15.4 2 39.7 8.9 50.4 14.4 4.6 2.3 5.3 1.8 5.3-4.1 0-4.7 3.8-22.2 7.1-32.4 3.8-11.9 13.9-32 21.5-42.5 27.1-37.7 69.8-66.3 116.8-78.4 56.4-14.4 101.7-4.8 135.1 28.9 13.3 13.3 21.2 27.1 26.1 45.1 2.8 10.5 2.6 38.9-.4 49.7-8.4 30.4-26.8 52.7-49.1 59.2-8 2.3-21.7 2-20.9-.6.2-.5 4-2.4 8.6-4.2 21.7-8.8 35.9-24.6 42.4-47.3 2.9-10 3.1-28.4.5-38.3-2.3-8.6-8.6-21.2-14.2-28.2-19.1-24.2-58.3-34.3-90.8-23.3-25.5 8.7-47.2 32.1-57.2 61.9-5 14.9-5.9 20.9-5.9 40.1.1 16.1.3 19 2.6 27.6 7 26.2 21.5 47.6 41.8 62.1 32.7 23.2 83.6 31.6 132.5 21.7 61.3-12.3 128.6-60.3 167.1-119 18.1-27.5 29.4-62.4 34.6-106.4 4.2-35.6-3.1-76.5-19.5-110-20.7-42.1-54.1-74.6-99.2-96.5-27.8-13.5-57.4-21.8-89.4-25-12.1-1.2-43.9-1.1-56.1.1zM552.2 865.6c-40.1 5.8-72.2 22.4-82 42.4-3.5 7.1-4.2 17.5-1.7 25 3 9 12.5 19.3 24.7 26.8 13.5 8.4 30.2 14.3 51.3 18.3 13.7 2.6 46.9 3.7 62.4 2 43.6-4.7 78.7-22 88.9-43.8 3.8-8.2 3.9-19.3 0-27.5-9.7-20.8-41.7-37.5-82.7-43.2-13.8-2-47.6-2-60.9 0zM522 1007.8c0 17.8-4 46.2-10 71.8-4.2 17.8-6.4 24.3-12.3 35.9-4.3 8.3-6.6 11.5-14.2 19.1-7.5 7.7-10.4 9.8-17.5 13.2-4.7 2.2-11.6 4.8-15.5 5.7-7.6 1.9-25.4 2.5-31.9 1.2-5.4-1.2-4.5.3 4.9 7.3 9 6.7 20.5 12.7 31 16 10.8 3.4 29.4 3.9 40.5 1.1 20.8-5.2 39.7-19.2 52.7-38.7 2-3 4-5.4 4.4-5.4 1.3 0 1.2.5-1.5 7.9-4.5 12.5-6.1 22.5-6 38.6 0 23.9 4.1 40.3 16.3 65 6.5 13.1 18.2 31.5 20 31.5 1.7 0 15.3-21.5 20.6-32.4 11.2-23.1 15.7-41.6 15.8-64.1 0-16-1.2-23.4-5.9-37.8-1.4-4.3-2.4-8.1-2.1-8.3.3-.3 2.4 2.1 4.8 5.3 11.2 15.3 20.6 24 34.2 31.3 11.9 6.5 18.3 8.1 33.2 8.7 11.6.4 14.1.2 22.6-2 14.2-3.7 32.7-13.6 40.5-21.8l2.9-3.1-4 .9c-6.5 1.3-24.4.7-31.8-1.1-29.6-7.1-48.6-28.8-58.1-66.3-6.8-26.7-10.5-50.5-11.3-72.6-.3-8.6-.9-15.7-1.2-15.7-.3 0-6.2 1.2-13.1 2.7-12.3 2.7-13.1 2.8-47 2.8-33.8 0-34.8-.1-47.2-2.8-7-1.5-13-2.7-13.3-2.7-.3 0-.5 4-.5 8.8z" />
+                           </svg>
+                        <span class="copy__text copy-logo__text">
+                           AneliaWEB
+                        </span>
+                     </a>
+                  </li>
+                  <li class="copy__item">
+                     <ul class="copy-contacts__list">
+                        <li class="copy-contacts__item">
+                           <a class="copy-contacts__link" href="tel:+375296458185" aria-label="позвонить">
+                              <svg class="copy-contacts__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                 <path
+                                    d="m20.487 17.14-4.065-3.696a1.001 1.001 0 0 0-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 0 0 .043-1.391L6.859 3.513a1 1 0 0 0-1.391-.087l-2.17 1.861a1 1 0 0 0-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a.992.992 0 0 0 .648-.291l1.86-2.171a.997.997 0 0 0-.085-1.39z" />
+                                 </svg>
+                           </a>
+                        </li>
+
+                        <li class="copy-contacts__item">
+                           <a class="copy-contacts__link" href="mailto:aneliaweb@internet.ru&body=Здравствуйте"
+                              aria-label="написать электронное письмо">
+
+                              <svg class="copy-contacts__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                 <path
+                                    d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.7-8 5.334L4 8.7V6.297l8 5.333 8-5.333V8.7z" />
+                                 </svg>
+                           </a>
+                        </li>
+
+                        <li class="copy-contacts__item">
+                           <a class="copy-contacts__link" href="https://aneliaweb.clients.site"
+                              aria-label="перейти в Яндекс бизнес">
+                              <svg class="copy-contacts__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                 <path
+                                    d="M9.2 2.3c-2.6 2.8-2.9 8.2-.6 10.8 1.4 1.6 1.4 2.1-.5 5.8-2.6 5-2.6 5.1-.1 5.1 1.4 0 2.6-1.2 3.8-3.7l1.7-3.6.5 3.4c.3 2.2 1.1 3.5 2.3 3.7 1.5.3 1.7-.8 1.7-11.7V0h-3.3c-2.2 0-4.1.8-5.5 2.3zM14 7.6c0 3.2-.4 4.4-1.2 4.2-1.7-.6-2.2-5.6-.7-7.4C13.8 2.3 14 2.6 14 7.6z" />
+                                 </svg>
+                           </a>
+                        </li>
+
+                        <li class="copy-contacts__item">
+                           <a class="copy-contacts__link" href="https://www.instagram.com/tasza_verstka_site/"
+                              aria-label="перейти в instagram">
+                              <svg class="copy-contacts__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                 <path
+                                    d="M20.947 8.305a6.53 6.53 0 0 0-.419-2.216 4.61 4.61 0 0 0-2.633-2.633 6.606 6.606 0 0 0-2.186-.42c-.962-.043-1.267-.055-3.709-.055s-2.755 0-3.71.055a6.606 6.606 0 0 0-2.185.42 4.607 4.607 0 0 0-2.633 2.633 6.554 6.554 0 0 0-.419 2.185c-.043.963-.056 1.268-.056 3.71s0 2.754.056 3.71c.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632 6.584 6.584 0 0 0 2.185.45c.963.043 1.268.056 3.71.056s2.755 0 3.71-.056a6.59 6.59 0 0 0 2.186-.419 4.615 4.615 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.187.043-.962.056-1.267.056-3.71-.002-2.442-.002-2.752-.058-3.709zm-8.953 8.297c-2.554 0-4.623-2.069-4.623-4.623s2.069-4.623 4.623-4.623a4.623 4.623 0 0 1 0 9.246zm4.807-8.339a1.077 1.077 0 0 1-1.078-1.078 1.077 1.077 0 1 1 2.155 0c0 .596-.482 1.078-1.077 1.078z" />
+                                 <circle cx="11.994" cy="11.979" r="3.003" /></svg>
+                           </a>
+                        </li>
+
+                        <li class="copy-contacts__item">
+                           <a class="copy-contacts__link" href="tg://resolve?domain=@NataszaWP"
+                              aria-label="перейти в telegram">
+                              <svg class="copy-contacts__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                 <path
+                                    d="m20.665 3.717-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785l3.019-14.228c.309-1.239-.473-1.8-1.282-1.434z" />
+                                 </svg>
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+
+            </div>
+         </div>
+      </footer>
+   </div>
+
+   <script src="./jsSpace/notificationLink.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+.menu {
+   &__text {
+      font-family: $font-second;
+      font-weight: 700;
+      font-size: 10px;
+      line-height: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: $color-black;
+   }
+
+   &__btn {
+      width: 130px;
+      height: 40px;
+   }
+}
+
+.logo {
+     transition: all 0.5s ease;
+   z-index: 15;
+   display: flex;
+   gap: 6px;
+   align-items: center;
+
+   &:hover,
+   &.active {
+
+      .logo__icon {
+         filter: grayscale(1);
+      }
+
+      .logo__text {
+         color: $color-hover;
+      }
+   }
+
+   &__text {
+      @extend %asz18;
+      font-weight: 700;
+      line-height: calc(21/18);
+      color: $color-black;
+
+      &--span {
+         font-weight: 400;
+         color: $color-pink;
+      }
+   }
+
+   &__icon {
+      width: 40px;
+      height: 40px;
+   }
+}
+
+/*
+  <div className="header__top">
+            <div className="container">
+               <div className="header__menu menu">
+                  <a className="menu__logo logo" href="#body">
+<img className="logo__icon" src="images/header/icon.png" alt="icon">
+                     <span className="logo__text">
+                        Go
+                        <span className="logo__text--span">Gorona</span>
+                     </span>
+                  </a>
+
+                  <nav className="menu__nav">
+                     <ul className="menu__list menu__list--main topmenu">
+                        <li className="menu__item topmenu__item">
+                           <a className="menu__link link topmenu__link" href="#body" data-scroll="#body">
+                              <span className="menu__text link__text">
+                                 Home
+                              </span>
+                           </a>
+                        </li>
+
+                        <li className="menu__item topmenu__item">
+                           <a className="menu__link link topmenu__link" href="#practic" data-scroll="#practic">
+                              <span className="menu__text link__text">
+                                 FEATURES
+                              </span>
+                           </a>
+                        </li>
+
+                        <li className="menu__item topmenu__item">
+                           <a className="menu__link link topmenu__link" href="#subscribe" data-scroll="#subscribe">
+                              <span className="menu__text link__text">
+                                 SUPPORT
+                              </span>
+                           </a>
+                        </li>
+
+                        <li className="menu__item topmenu__item">
+                           <a className="menu__link link topmenu__link" href="#contact" data-scroll="#contact">
+                              <span className="menu__text link__text">
+                                 Contact&nbsp;us
+                              </span>
+                           </a>
+                        </li>
+                     </ul>
+
+                     <a className="menu__link btn btn--blue" href="#">
+                           <span className="btn__text">
+                              Learn&nbsp;More
+                           </span>
+                        </a>
+                  </nav>
+
+                  <button className="menu__btn-burger btn-burger" type="button" aria-label="button menu" id="menuBtn">
+                     <span className="btn-burger__btn-line"></span>
+                  </button>
+               </div>
+            </div>
+         </div>
+         */

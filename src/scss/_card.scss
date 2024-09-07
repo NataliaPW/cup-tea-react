@@ -1,0 +1,159 @@
+.card{
+   height: 100%;
+   
+   &__article{
+      background-color: $color-gray-100;
+      display: flex;
+      flex-direction: column;
+      @include gap-all-adopt(10,5,1);
+      border-radius: 6px;
+      overflow: hidden;
+
+      &--modal{
+         flex-direction: row;
+
+         @include media(1, $md6) {
+         flex-direction: column;
+      }
+
+      .card{
+         &__image-box{
+            width:calc(336/745*100%);
+            aspect-ratio: calc(360/336);
+            padding-bottom: 0;
+
+             @include media(1, $md6) {
+         width: 100%;
+      }
+         }
+
+         &__text-box{
+             width:calc(100% - 336/745*100%);
+
+              @include media(1, $md6) {
+        width: 100%;
+      }
+         }
+
+          &__name-list{
+      color:$color-gray;
+    }
+
+    &__price-box{
+       font-weight: 700;
+    }
+      }
+      }
+   }
+
+   &__image-box{
+      padding-bottom: calc(445/420*100%);
+   }
+
+   &__link{
+      outline: transparent;
+      transition: all 0.5s ease;
+       
+      &:hover{
+         color:$color-hover;
+      }
+   }
+
+   &__name{
+      @extend %asz20;
+      @include line-clamp(2);
+      font-weight: 700;
+      @include height-adopt(45,40);
+   }
+
+   &__text-box{
+      display: flex;
+      flex-direction: column;
+      @include gap-all-adopt(30,15,1);
+      justify-content: space-between;
+      @include p-adopt(24,16,1);
+      @include p-adopt(24,16,3);
+      @include p-adopt(24,8,2);
+      @include p-adopt(24,8,4);
+   }
+
+    &__top{
+      display: flex;
+      flex-direction: column;
+      @include gap-all-adopt(10,7,1);
+    }
+
+   &__bottom{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include gap-all-adopt(20,15,1);
+   }
+
+    &__list{
+      display: flex;
+      flex-direction: column;
+      @include gap-all-adopt(10,7,1);
+    }
+
+    &__item{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+}
+
+.count{
+   display: flex;
+   align-items: center;
+   color:$color-main;
+   gap:5px;
+
+   .btn{
+      padding: 1px;
+      //line-height: 24px;
+      //width: 36px;
+      //height: 36px;
+       @include line-height-adopt(36, 24);
+      @include icon-size-aspectRatio(36,24,36);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border:1px solid $color-gray;
+
+       &:hover:not(:disabled),
+   &:active:not(:disabled),
+   &.active:not(:disabled) {
+         transform: translateY(0);
+   }
+   }
+
+   &__input{
+      max-width: 28px;
+      outline: transparent;
+      transition: all 0.5s ease;
+       text-align: center !important;  
+       line-height: 32px;
+       width: 100%;
+   }
+
+}
+
+.modalCard{
+
+   &__btn-close{
+ position: absolute;
+      right: 10px;
+      top: 10px;
+      outline: transparent;
+      transition: all 0.5s ease;
+       
+      &:hover{
+         color:$color-hover;
+      }
+   }
+}
+
+.ReactModal__Overlay {
+   z-index: 100;
+}

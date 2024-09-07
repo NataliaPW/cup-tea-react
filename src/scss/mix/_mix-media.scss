@@ -1,0 +1,58 @@
+//media
+//! адаптив media - все media
+//?   @include media(1, $md2){//content};
+
+@mixin media($size,$md) {
+   @if($size==1) {
+    @media screen and (max-width: $md) {
+        @content;
+    }
+   }
+   @if($size==2) {
+    @media screen and (min-width: $md) {
+        @content;
+    }
+   }
+   @if($size==3) {
+    @media screen and (max-height: $md) {
+        @content;
+    }
+   }
+   @if($size==4) {
+    @media screen and (min-height: $md) {
+        @content;
+    }
+   }
+   //альбомная ориентация
+   @if($size==5) {
+    @media (min-height: $hd3) and (orientation: landscape) and (max-width: $md2) {
+        @content;
+    }
+   }
+
+   //для yстройств поддерживающий нажатие
+   @if($size==6) {
+        @media (any-hover: hover) {
+
+      &:hover,
+      &:active {
+     @content;
+      }
+   }
+}
+
+    //для yстройств не поддерживающий нажатие
+    @if($size==7) {
+   @media (any-hover: none) {
+        @content; 
+      }
+   }
+}
+
+//1-max-width
+//2-min-width
+//3-max-height
+//4-min-height
+//5-альбомная ориентация
+//6-для yстройств поддерживающий нажатие
+//7-для yстройств не поддерживающий нажатие

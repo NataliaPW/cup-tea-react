@@ -1,0 +1,227 @@
+.header{
+  
+   @include btn-burger(28, 18, $md3,transparent,transparent,$color-bg,$color-hover,2,80%,80%,80%,80%,right);
+
+   &._loaded{
+      .header{
+         &__top{
+       transition: transform 0.8s ease 1.1s;
+            transform: translateY(0);
+         }
+      }
+   }
+
+   &__container{
+      position: relative;
+       background-color: transparent;
+         @include p-adopt(20,5,1);
+   @include p-adopt(20,5,3);
+
+   &--green{
+      background-color: $color-green; 
+   }
+
+       &::before, &::after{
+         content:'';
+         position: absolute;
+          background-color: $color-green;
+          @include width-adopt(46,20);
+          height: 100%;
+       }
+
+      &::after{
+         top: 0;
+         bottom: 0;
+         @include pos-adopt(-46,-20,2);
+         border-radius: 0 10px 10px 0;
+      }
+
+      &::before{
+          top: 0;
+         bottom: 0;
+        @include pos-adopt(-46,-20,4);
+         border-radius:10px 0 0 10px;
+      }
+   }
+
+   
+    &__top {
+       position: fixed;
+       top: 0;
+       left: 0;
+       right: 0;
+     //  background-color: transparent;
+       z-index: 10;
+      transition: all 0.5s ease;
+   transform: translateY(-100%);
+      
+
+       &--fixed {
+         .header{
+            &__container{
+          filter: drop-shadow(2px 3px 2px $color-bg);
+           padding: 0;
+            }
+         }
+       }
+    }
+
+ }
+
+ .menu {
+    display: flex;
+    align-items: center;
+    @include gap-all-adopt(30, 15, 2);
+     @include gap-all-adopt(30, 20, 3);
+    padding: 15px 0;
+    justify-content: space-between;
+    color:$color-bg;
+
+      &__logo {
+       z-index: 15;
+    }
+
+    &__nav {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+
+@include media(1, $md3){
+         opacity: 0;
+          visibility: hidden;
+          transition: all 0.5s ease;
+
+          &--active {
+             display: flex;
+             align-items: center;
+             opacity: 1;
+             visibility: visible;
+
+             &::before {
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 0;
+                width: 100%;
+                  height: calc(var(--vh, 1vh) * 100);
+                background-color: rgba($color-hover, 0.5);
+                z-index: 8;
+             }
+          }
+       }
+    }
+
+    &__list {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       @include gap-all-adopt(50, 15, 1);
+
+       @include media(1, $md3){
+          transform: translateX(1000%);
+          flex-direction: column;
+          background-color: $color-green;
+          align-items: center;
+          justify-content: flex-start;
+          padding: 84px 5px 5px;
+          width: 80vw;
+            height: calc(var(--vh, 1vh) * 100);
+          position: absolute;
+          top: 0;
+          right: 0;
+          z-index: 12;
+          overflow-y: auto;
+          transition: transform 0.5s ease;
+
+           @include media(1, $md4){
+             width: 100vw;
+          };
+
+          &--active {
+             transform: translateX(0%);
+          }
+       }
+    }
+
+      &__link{
+      transition: all 0.5s ease;
+      
+      &:hover,&.active {
+          .menu {
+             &__text {
+                color: $color-hover;
+
+                &::after {
+                   width: 100%;
+                   left: 0;
+                }
+             }
+          }
+      }
+    }
+
+    &__text {
+      @extend %asz20;
+       font-weight: 400;
+
+       text-transform: uppercase;
+       position: relative;
+
+             &::after {
+         position: absolute;
+         content: "";
+         left: 50%;
+         bottom: 0;
+         width: 0;
+         height: 1px;
+         background-color: $color-hover;
+         transition: all 0.5s ease;
+             }
+      
+  @include media(1, $md3){
+    font-size: 20px;
+  }
+    }
+
+    &__btn-box{
+      display: flex;
+      align-items: center;
+      @include gap-all-adopt(20,15,1);
+    }
+ }
+
+ .cart{
+   display: block;
+   position: relative;
+   outline: transparent;
+   transition: all 0.5s ease;
+    
+   &:hover,&:active,&.active{
+      .cart{
+         &__icon{
+            fill:$color-hover;
+         }
+
+         &__count{
+            color:$color-bg;
+         }
+      }
+   }
+
+   &__icon{
+      fill:$color-bg;
+      width: 28px;
+      height: 29px;
+   }
+   
+   &__count{
+      position: absolute;
+      font-size: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 12px;
+      color:$color-hover;
+   }
+ }
+
+

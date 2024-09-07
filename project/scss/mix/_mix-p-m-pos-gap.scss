@@ -1,0 +1,795 @@
+//! адаптив padding
+//? mip    @include p-adopt(60, 30, 1);
+
+@mixin p-adopt($startSize, $minSize, $type) {
+   $addSize: $startSize - $minSize;
+
+   @if($type==1) {
+
+    
+      @media (max-width: #{$maxWidthContainer}px) {
+         padding-top: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+      }
+
+      
+      @media (min-width: #{$maxWidthContainer}px) {
+         padding-top: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+      }
+   }
+
+   @if($type==2) {
+
+     
+      @media (max-width: #{$maxWidthContainer}px) {
+         padding-right: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+      }
+
+     
+      @media (min-width: #{$maxWidthContainer}px) {
+         padding-right: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+      }
+   }
+
+   @if($type==3) {
+
+      
+      @media (max-width: #{$maxWidthContainer}px) {
+         padding-bottom: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+      }
+
+      
+      @media (min-width: #{$maxWidthContainer}px) {
+         padding-bottom: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+      }
+   }
+
+   @if($type==4) {
+
+      
+      @media (max-width: #{$maxWidthContainer}px) {
+         padding-left: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+      }
+
+     
+      @media (min-width: #{$maxWidthContainer}px) {
+         padding-left: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+      }
+   }
+}
+
+//! адаптив padding - все ед. измерения
+//? mipa  @include p-all-adopt(60, 30, 1, 1);
+
+@mixin p-all-adopt($startSize, $minSize, $type, $size) {
+   $addSize: $startSize - $minSize;
+
+   @if($size==1) {
+      //пиксель
+
+      @if($type==1) {
+
+         
+         @media (max-width: #{$maxWidthContainer}px) {
+            padding-top: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+         }
+
+         
+         @media (min-width: #{$maxWidthContainer}px) {
+            padding-top: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+         }
+      }
+
+      @if($type==2) {
+
+        
+         @media (max-width: #{$maxWidthContainer}px) {
+            padding-right: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+         }
+
+        
+         @media (min-width: #{$maxWidthContainer}px) {
+            padding-right: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+         }
+      }
+
+      @if($type==3) {
+
+        
+         @media (max-width: #{$maxWidthContainer}px) {
+            padding-bottom: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+         }
+
+        
+         @media (min-width: #{$maxWidthContainer}px) {
+            padding-bottom: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+         }
+      }
+
+      @if($type==4) {
+
+        
+         @media (max-width: #{$maxWidthContainer}px) {
+            padding-left: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+         }
+
+        
+         @media (min-width: #{$maxWidthContainer}px) {
+            padding-left: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+         }
+      }
+   }
+
+   @if($size==2) {
+      //проценты
+
+      @if($type==1) {
+
+        
+         @media (max-width: #{$maxWidthContainer}px) {
+            padding-top: calc(#{$minSize}% + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+         }
+
+        
+         @media (min-width: #{$maxWidthContainer}px) {
+            padding-top: calc(#{$minSize}% + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+         }
+      }
+
+      @if($type==2) {
+
+         
+         @media (max-width: #{$maxWidthContainer}px) {
+            padding-right: calc(#{$minSize}% + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+         }
+
+         
+         @media (min-width: #{$maxWidthContainer}px) {
+            padding-right: calc(#{$minSize}% + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+         }
+      }
+
+      @if($type==3) {
+
+         
+         @media (max-width: #{$maxWidthContainer}px) {
+            padding-bottom: calc(#{$minSize}% + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+         }
+
+         
+         @media (min-width: #{$maxWidthContainer}px) {
+            padding-bottom: calc(#{$minSize}% + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+         }
+      }
+
+      @if($type==4) {
+
+         
+         @media (max-width: #{$maxWidthContainer}px) {
+            padding-left: calc(#{$minSize}% + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+         }
+
+         
+         @media (min-width: #{$maxWidthContainer}px) {
+            padding-left: calc(#{$minSize}% + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+         }
+      }
+   }
+}
+
+//  @include p-squery-adopt(50,20,50,20);//верх(низ)/право(лево)
+@mixin p-squery-adopt($pt1,$pt2,$pl1,$pl2) {
+    @include p-adopt($pt1,$pt2,1);
+         @include p-adopt($pl1,$pl2,2);
+         @include p-adopt($pt1,$pt2,3);
+         @include p-adopt($pl1,$pl2,4);
+}
+
+//  @include p-side-adopt(50,20,1,2,3,4);//размер, стороны
+@mixin p-side-adopt($p1,$p2,$t,$r,$b,$l) {
+    @if($t==1) {
+  @include p-adopt($p1,$p2,1);
+    } @else if ($t==0){
+padding-top: 0;
+    }
+  
+       @if($r==2) {
+  @include p-adopt($p1,$p2,2);
+    } @else if ($r==0){
+padding-right: 0;
+    }
+
+       @if($r==3) {
+  @include p-adopt($p1,$p2,3);
+    } @else if ($b==0){
+padding-bottom: 0;
+    }
+
+        @if($r==4) {
+  @include p-adopt($p1,$p2,4);
+    } @else if ($b==0){
+padding-left: 0;
+    }
+}
+
+//!адаптив margin
+//? mim    @include m-adopt(60, 30, 1);
+
+@mixin m-adopt($startSize, $minSize, $type) {
+   $addSize: $startSize - $minSize;
+
+   @if($type==1) {
+
+     
+      @media (max-width: #{$maxWidthContainer}px) {
+         margin-top: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+      }
+
+      
+      @media (min-width: #{$maxWidthContainer}px) {
+         margin-top: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+      }
+   }
+
+   @if($type==2) {
+
+      
+      @media (max-width: #{$maxWidthContainer}px) {
+         margin-right: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+      }
+
+      
+      @media (min-width: #{$maxWidthContainer}px) {
+         margin-right: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+      }
+   }
+
+   @if($type==3) {
+
+     
+      @media (max-width: #{$maxWidthContainer}px) {
+         margin-bottom: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+      }
+
+      
+      @media (min-width: #{$maxWidthContainer}px) {
+         margin-bottom: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+      }
+   }
+
+   @if($type==4) {
+
+     
+      @media (max-width: #{$maxWidthContainer}px) {
+         margin-left: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+      }
+
+     
+      @media (min-width: #{$maxWidthContainer}px) {
+         margin-left: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+      }
+   }
+}
+
+//! адаптив margin - все ед. измерения
+//? mima  @include m-all-adopt(60, 30, 1, 1);
+
+@mixin m-all-adopt($startSize, $minSize, $type, $size) {
+   $addSize: $startSize - $minSize;
+
+   @if($size==1) {
+      //пиксель
+
+      @if($type==1) {
+
+         //*только если меньше контейнера*/
+         @media (max-width: #{$maxWidthContainer}px) {
+            margin-top: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+         }
+
+         //*только если больше контейнера*/
+         @media (min-width: #{$maxWidthContainer}px) {
+            margin-top: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+         }
+      }
+
+      @if($type==2) {
+
+         //*только если меньше контейнера*/
+         @media (max-width: #{$maxWidthContainer}px) {
+            margin-right: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+         }
+
+         //*только если больше контейнера*/
+         @media (min-width: #{$maxWidthContainer}px) {
+            margin-right: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+         }
+      }
+
+      @if($type==3) {
+
+         //*только если меньше контейнера*/
+         @media (max-width: #{$maxWidthContainer}px) {
+            margin-bottom: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+         }
+
+         //*только если больше контейнера*/
+         @media (min-width: #{$maxWidthContainer}px) {
+            margin-bottom: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+         }
+      }
+
+      @if($type==4) {
+
+         //*только если меньше контейнера*/
+         @media (max-width: #{$maxWidthContainer}px) {
+            margin-left: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+         }
+
+         //*только если больше контейнера*/
+         @media (min-width: #{$maxWidthContainer}px) {
+            margin-left: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+         }
+      }
+   }
+
+   @if($size==2) {
+      //проценты
+
+      @if($type==1) {
+
+         //*только если меньше контейнера*/
+         @media (max-width: #{$maxWidthContainer}px) {
+            margin-top: calc(#{$minSize}% + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+         }
+
+         //*только если больше контейнера*/
+         @media (min-width: #{$maxWidthContainer}px) {
+            margin-top: calc(#{$minSize}% + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+         }
+      }
+
+      @if($type==2) {
+
+         //*только если меньше контейнера*/
+         @media (max-width: #{$maxWidthContainer}px) {
+            margin-right: calc(#{$minSize}% + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+         }
+
+         //*только если больше контейнера*/
+         @media (min-width: #{$maxWidthContainer}px) {
+            margin-right: calc(#{$minSize}% + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+         }
+      }
+
+      @if($type==3) {
+
+         //*только если меньше контейнера*/
+         @media (max-width: #{$maxWidthContainer}px) {
+            margin-bottom: calc(#{$minSize}% + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+         }
+
+         //*только если больше контейнера*/
+         @media (min-width: #{$maxWidthContainer}px) {
+            margin-bottom: calc(#{$minSize}% + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+         }
+      }
+
+      @if($type==4) {
+
+         //*только если меньше контейнера*/
+         @media (max-width: #{$maxWidthContainer}px) {
+            margin-left: calc(#{$minSize}% + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+         }
+
+         //*только если больше контейнера*/
+         @media (min-width: #{$maxWidthContainer}px) {
+            margin-left: calc(#{$minSize}% + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+         }
+      }
+   }
+}
+
+//!отступ без последнего
+//? miml  @include m-last(60, 30);
+
+@mixin m-last($value, $type) {
+   @if($type==1) {
+      margin-top: #{$value}px;
+   }
+
+   @if($type==2) {
+      margin-right: #{$value}px;
+   }
+
+   @if($type==3) {
+      margin-bottom: #{$value}px;
+   }
+
+   @if($type==4) {
+      margin-left: #{$value}px;
+   }
+
+   @if($type==11) {
+      &:not(:last-child) {
+         margin-top: #{$value}px;
+      }
+   }
+
+   @if($type==21) {
+      &:not(:last-child) {
+         margin-right: #{$value}px;
+      }
+   }
+
+   @if($type==31) {
+      &:not(:last-child) {
+         margin-bottom: #{$value}px;
+      }
+   }
+
+   @if($type==41) {
+      &:not(:last-child) {
+         margin-left: #{$value}px;
+      }
+   }
+}
+
+//!отступ с учетом размера шрифта
+//? mimf @include m-font(30, 14, 0); 
+
+@mixin m-font($value, $font, $type) {
+   @if($type==0) {
+      margin-bottom: calc((#{$value} / #{$font}) * 1em);
+   }
+
+   @if($type==1) {
+      &:not(:last-child) {
+         margin-bottom: calc((#{$value} / #{$font}) * 1em);
+      }
+   }
+
+   @if($type==3) {
+      margin-top: calc((#{$value} / #{$font}) * 1em);
+   }
+
+   @if($type==4) {
+      &:not(:last-child) {
+         margin-top: calc((#{$value} / #{$font}) * 1em);
+      }
+   }
+}
+
+//адаптив gap
+//  @include gap-adopt(60, 30); 
+
+@mixin gap-adopt($startSize, $minSize) {
+   $addSize: $startSize - $minSize;
+
+   
+   @media (max-width: #{$maxWidthContainer}px) {
+      gap: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+   }
+
+   
+   @media (min-width: #{$maxWidthContainer}px) {
+      gap: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+   }
+}
+
+//! адаптив gap 
+//? mig  @include gap-all-adopt(60, 30, 1);
+
+@mixin gap-all-adopt($startSize, $minSize, $type) {
+   $addSize: $startSize - $minSize;
+
+   @if($type==1) {
+
+      
+      @media (max-width: #{$maxWidthContainer}px) {
+         gap: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+      }
+
+     
+      @media (min-width: #{$maxWidthContainer}px) {
+         gap: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+      }
+   }
+
+   @if($type==2) {
+
+      
+      @media (max-width: #{$maxWidthContainer}px) {
+         column-gap: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+      }
+
+     
+      @media (min-width: #{$maxWidthContainer}px) {
+         column-gap: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+      }
+   }
+
+   @if($type==3) {
+
+      
+      @media (max-width: #{$maxWidthContainer}px) {
+         row-gap: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+      }
+
+     
+      @media (min-width: #{$maxWidthContainer}px) {
+         row-gap: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+      }
+   }
+}
+
+//! адаптив gap - все ед. измерения
+//? miga  @include gap-all-adopt-size(60, 30, 1, 1);
+
+@mixin gap-all-adopt-size($startSize, $minSize, $type, $size) {
+   $addSize: $startSize - $minSize;
+
+   @if($size==1) {
+      //пиксель
+
+      @if($type==1) {
+
+         //*только если меньше контейнера*/
+         @media (max-width: #{$maxWidthContainer}px) {
+            gap: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+         }
+
+         //*только если больше контейнера*/
+         @media (min-width: #{$maxWidthContainer}px) {
+            gap: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+         }
+      }
+
+      @if($type==2) {
+
+         //*только если меньше контейнера*/
+         @media (max-width: #{$maxWidthContainer}px) {
+            column-gap: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+         }
+
+         //*только если больше контейнера*/
+         @media (min-width: #{$maxWidthContainer}px) {
+            column-gap: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+         }
+      }
+
+      @if($type==3) {
+
+         //*только если меньше контейнера*/
+         @media (max-width: #{$maxWidthContainer}px) {
+            row-gap: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+         }
+
+         //*только если больше контейнера*/
+         @media (min-width: #{$maxWidthContainer}px) {
+            row-gap: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+         }
+      }
+   }
+
+   @if($size==2) {
+      //проценты
+
+      @if($type==1) {
+
+         //*только если меньше контейнера*/
+         @media (max-width: #{$maxWidthContainer}px) {
+            gap: calc(#{$minSize}% + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+         }
+
+         //*только если больше контейнера*/
+         @media (min-width: #{$maxWidthContainer}px) {
+            gap: calc(#{$minSize}% + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+         }
+      }
+
+      @if($type==2) {
+
+         //*только если меньше контейнера*/
+         @media (max-width: #{$maxWidthContainer}px) {
+            column-gap: calc(#{$minSize}% + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+         }
+
+         //*только если больше контейнера*/
+         @media (min-width: #{$maxWidthContainer}px) {
+            column-gap: calc(#{$minSize}% + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+         }
+      }
+
+      @if($type==3) {
+
+         //*только если меньше контейнера*/
+         @media (max-width: #{$maxWidthContainer}px) {
+            row-gap: calc(#{$minSize}% + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+         }
+
+         //*только если больше контейнера*/
+         @media (min-width: #{$maxWidthContainer}px) {
+            row-gap: calc(#{$minSize}% + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+         }
+      }
+   }
+}
+
+
+//! адаптив position
+//? mipos    @include pos-adopt(60, 30, 1);
+
+@mixin pos-adopt($startSize, $minSize, $type) {
+   $addSize: $startSize - $minSize;
+
+   @if($type==1) {
+
+     
+      @media (max-width: #{$maxWidthContainer}px) {
+         top: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+      }
+
+      
+      @media (min-width: #{$maxWidthContainer}px) {
+         top: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+      }
+   }
+
+   @if($type==2) {
+
+      
+      @media (max-width: #{$maxWidthContainer}px) {
+         right: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+      }
+
+      
+      @media (min-width: #{$maxWidthContainer}px) {
+         right: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+      }
+   }
+
+   @if($type==3) {
+
+      
+      @media (max-width: #{$maxWidthContainer}px) {
+         bottom: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+      }
+
+      
+      @media (min-width: #{$maxWidthContainer}px) {
+         bottom: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+      }
+   }
+
+   @if($type==4) {
+
+     
+      @media (max-width: #{$maxWidthContainer}px) {
+         left: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+      }
+
+     
+      @media (min-width: #{$maxWidthContainer}px) {
+         left: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+      }
+   }
+}
+
+//! адаптив position - все ед. измерения
+//? miposa  @include pos-all-adopt(60, 30, 1, 1);
+
+@mixin pos-all-adopt($startSize, $minSize, $type, $size) {
+   $addSize: $startSize - $minSize;
+
+   @if($size==1) {
+      //пиксель
+
+      @if($type==1) {
+
+         //*только если меньше контейнера*/
+         @media (max-width: #{$maxWidthContainer}px) {
+            top: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+         }
+
+         //*только если больше контейнера*/
+         @media (min-width: #{$maxWidthContainer}px) {
+            top: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+         }
+      }
+
+      @if($type==2) {
+
+         //*только если меньше контейнера*/
+         @media (max-width: #{$maxWidthContainer}px) {
+            right: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+         }
+
+         //*только если больше контейнера*/
+         @media (min-width: #{$maxWidthContainer}px) {
+            right: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+         }
+      }
+
+      @if($type==3) {
+
+         //*только если меньше контейнера*/
+         @media (max-width: #{$maxWidthContainer}px) {
+            bottom: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+         }
+
+         //*только если больше контейнера*/
+         @media (min-width: #{$maxWidthContainer}px) {
+            bottom: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+         }
+      }
+
+      @if($type==4) {
+
+         //*только если меньше контейнера*/
+         @media (max-width: #{$maxWidthContainer}px) {
+            left: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+         }
+
+         //*только если больше контейнера*/
+         @media (min-width: #{$maxWidthContainer}px) {
+            left: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+         }
+      }
+   }
+
+   @if($size==2) {
+      //проценты
+
+      @if($type==1) {
+
+         //*только если меньше контейнера*/
+         @media (max-width: #{$maxWidthContainer}px) {
+            top: calc(#{$minSize}% + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+         }
+
+         //*только если больше контейнера*/
+         @media (min-width: #{$maxWidthContainer}px) {
+            top: calc(#{$minSize}% + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+         }
+      }
+
+      @if($type==2) {
+
+         //*только если меньше контейнера*/
+         @media (max-width: #{$maxWidthContainer}px) {
+            right: calc(#{$minSize}% + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+         }
+
+         //*только если больше контейнера*/
+         @media (min-width: #{$maxWidthContainer}px) {
+            right: calc(#{$minSize}% + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+         }
+      }
+
+      @if($type==3) {
+
+         //*только если меньше контейнера*/
+         @media (max-width: #{$maxWidthContainer}px) {
+            bottom: calc(#{$minSize}% + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+         }
+
+         //*только если больше контейнера*/
+         @media (min-width: #{$maxWidthContainer}px) {
+            bottom: calc(#{$minSize}% + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+         }
+      }
+
+      @if($type==4) {
+
+         //*только если меньше контейнера*/
+         @media (max-width: #{$maxWidthContainer}px) {
+            left: calc(#{$minSize}% + #{$addSize} * ((100vw - 320px) / (#{$maxWidth - 320})));
+         }
+
+         //*только если больше контейнера*/
+         @media (min-width: #{$maxWidthContainer}px) {
+            left: calc(#{$minSize}% + #{$addSize} * ((100vw - 320px) / (#{$maxWidthContainer - 320})));
+         }
+      }
+   }
+}
